@@ -20,6 +20,6 @@ app.use(cors());
 app.use("/api/todos", todoRoute);
 app.use("/api/auth", authRoute);
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log("Backend server is running on " + process.env.PORT);
 });
