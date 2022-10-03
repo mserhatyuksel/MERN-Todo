@@ -20,10 +20,10 @@ app.use(cors());
 app.use("/api/todos", todoRoute);
 app.use("/api/auth", authRoute);
 
-app.use(express.static(path.join(__dirname, "../client/build")));
+app.use(express.static(path.join(__dirname, "build")));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 app.listen(process.env.PORT || 5000, () => {
