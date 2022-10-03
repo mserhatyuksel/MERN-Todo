@@ -6,6 +6,7 @@ const morgan = require("morgan");
 require("dotenv").config();
 const todoRoute = require("./routes/todo");
 const authRoute = require("./routes/auth");
+const path = require("path");
 
 const app = express();
 mongoose.connect(process.env.MONGO_URL, () => {
